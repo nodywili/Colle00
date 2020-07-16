@@ -6,7 +6,7 @@
 /*   By: nodywili <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 10:28:10 by nodywili          #+#    #+#             */
-/*   Updated: 2020/07/15 16:06:32 by nodywili         ###   ########.fr       */
+/*   Updated: 2020/07/16 17:34:50 by nodywili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@ void rush(int x, int y){
 				 row = 0;
 				 column = 0;
 
-				while(row < y ){
-					while(column < x){
-								 if((column == 0  || row == (x -1)) && (column == (x-1) || row == (y -1)))
+				while(row < y )
+					{
+					while(column < x)
+						{
+								 if((column == 0  && row == (y -1)) || (column == (x-1) && row == (y -1)))
 								 {
-								 				ft_putchar('c');
+								 				ft_putchar('C');
 								 }
-								 else if(( row == 0 || column == 0) && (row == 0 || column == (x-1)))
+								 else if(( row == 0 && column == 0) || (row == 0 && column == (x-1)))
 								 {
 								 				ft_putchar('A');
 								 }
